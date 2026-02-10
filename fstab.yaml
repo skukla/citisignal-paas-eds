@@ -1,7 +1,0 @@
-mountpoints:
-  /:
-    url: https://content.da.live/skukla/citisignal-paas-eds/
-    type: markup
-
-folders:
-  /products/: /products/default
