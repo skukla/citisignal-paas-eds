@@ -1,7 +1,0 @@
-mountpoints:
-  /:
-    url: https://content.da.live/skukla/eds-paas-storefront/
-    type: markup
-
-folders:
-  /products/: /products/default
