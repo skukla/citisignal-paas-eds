@@ -371,6 +371,28 @@
               ]
             }
           }
+        },
+        {
+          "title": "Blog List",
+          "id": "blog-list",
+          "plugins": {
+            "da": {
+              "name": "blog-list",
+              "rows": 1,
+              "columns": 1
+            }
+          }
+        },
+        {
+          "title": "Blog Tiles",
+          "id": "blog-tiles",
+          "plugins": {
+            "da": {
+              "name": "blog-tiles",
+              "rows": 1,
+              "columns": 1
+            }
+          }
         }
       ]
     },
