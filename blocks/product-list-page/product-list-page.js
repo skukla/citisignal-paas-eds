@@ -11,9 +11,9 @@ import { WishlistToggle } from '@dropins/storefront-wishlist/containers/Wishlist
 import { render as wishlistRender } from '@dropins/storefront-wishlist/render.js';
 // Cart Dropin
 import * as cartApi from '@dropins/storefront-cart/api.js';
-import { tryRenderAemAssetsImage } from '@dropins/tools/lib/aem/assets.js';
-// Event Bus
 import { events } from '@dropins/tools/event-bus.js';
+import { tryRenderAemAssetsImage } from '../../scripts/aem-assets.js';
+// Event Bus
 // AEM
 import { readBlockConfig } from '../../scripts/aem.js';
 import { fetchPlaceholders, getProductLink } from '../../scripts/commerce.js';
@@ -31,10 +31,10 @@ export default async function decorate(block) {
     <div class="search__wrapper">
       <div class="search__result-info"></div>
       <div class="search__view-facets"></div>
-      <div class="search__facets"></div>
-      <div class="search__product-sort"></div>
-      <div class="search__product-list"></div>
-      <div class="search__pagination"></div>
+      <div class="search__facets" data-inspector-source="search"></div>
+      <div class="search__product-sort" data-inspector-source="search"></div>
+      <div class="search__product-list" data-inspector-source="search"></div>
+      <div class="search__pagination" data-inspector-source="search"></div>
     </div>
   `);
 

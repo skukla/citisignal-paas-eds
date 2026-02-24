@@ -1,7 +1,7 @@
 // Drop-in Tools
 import { events } from '@dropins/tools/event-bus.js';
 
-import { tryRenderAemAssetsImage } from '@dropins/tools/lib/aem/assets.js';
+import { tryRenderAemAssetsImage } from '../../scripts/aem-assets.js';
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 import { fetchPlaceholders, getProductLink, rootLink } from '../../scripts/commerce.js';
@@ -157,14 +157,13 @@ function setupSubmenu(navSection) {
  * @param {Element} block The header block element
  */
 export default async function decorate(block) {
-  block.textContent = '';
-
   // load nav as fragment
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   const fragment = await loadFragment(navPath);
 
   // decorate nav DOM
+  block.textContent = '';
   const nav = document.createElement('nav');
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
@@ -184,6 +183,7 @@ export default async function decorate(block) {
 
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
+    navSections.setAttribute('data-inspector-source', 'commerce');
     navSections
       .querySelectorAll(':scope .default-content-wrapper > ul > li')
       .forEach((navSection) => {
@@ -235,8 +235,8 @@ export default async function decorate(block) {
 
   const minicart = document.createRange().createContextualFragment(`
      <div class="minicart-wrapper nav-tools-wrapper">
-       <button type="button" class="nav-cart-button" aria-label="Cart"></button>
-       <div class="minicart-panel nav-tools-panel"></div>
+       <button type="button" class="nav-cart-button" aria-label="Cart" data-inspector-source="commerce"></button>
+       <div class="minicart-panel nav-tools-panel" data-inspector-source="commerce"></div>
      </div>
    `);
 
@@ -337,7 +337,7 @@ export default async function decorate(block) {
   const searchFragment = document.createRange().createContextualFragment(`
   <div class="search-wrapper nav-tools-wrapper">
     <button type="button" class="nav-search-button">Search</button>
-    <div class="nav-search-input nav-search-panel nav-tools-panel">
+    <div class="nav-search-input nav-search-panel nav-tools-panel" data-inspector-source="search">
       <form id="search-bar-form"></form>
       <div class="search-bar-result" style="display: none;"></div>
     </div>
