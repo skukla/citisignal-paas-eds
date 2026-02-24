@@ -3,36 +3,22 @@
     {
       "title": "Accordion",
       "id": "accordion",
-      "model": "accordion",
-      "filter": "accordion",
       "plugins": {
         "da": {
           "name": "accordion",
           "rows": 1,
-          "columns": 2,
-          "unsafeHTML": "<div class=\"accordion\"><div><div><h3>FAQ Question</h3></div><div><p>Answer content goes here.</p></div></div><div><div><h3>Another Question</h3></div><div><p>More details here.</p></div></div></div>"
+          "columns": 2
         }
       }
     },
     {
       "title": "Accordion Item",
       "id": "accordion-item",
-      "model": "accordion-item",
       "plugins": {
         "da": {
           "name": "accordion-item",
           "rows": 2,
-          "columns": 0,
-          "fields": [
-            {
-              "name": "summary",
-              "selector": "div:nth-child(1)"
-            },
-            {
-              "name": "text",
-              "selector": "div:nth-child(2)"
-            }
-          ]
+          "columns": 0
         }
       }
     }
@@ -44,14 +30,14 @@
         {
           "component": "richtext",
           "valueType": "string",
-          "name": "summary",
+          "name": "div:nth-child(1)",
           "value": "",
           "label": "Summary",
           "required": true
         },
         {
           "component": "richtext",
-          "name": "text",
+          "name": "div:nth-child(2)",
           "value": "",
           "label": "Text",
           "valueType": "string",
