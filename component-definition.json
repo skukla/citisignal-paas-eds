@@ -375,6 +375,166 @@
               ]
             }
           }
+        },
+        {
+          "title": "Blog List",
+          "id": "blog-list",
+          "plugins": {
+            "da": {
+              "name": "blog-list",
+              "rows": 1,
+              "columns": 1
+            }
+          }
+        },
+        {
+          "title": "Blog Tiles",
+          "id": "blog-tiles",
+          "plugins": {
+            "da": {
+              "name": "blog-tiles",
+              "rows": 1,
+              "columns": 1
+            }
+          }
+        },
+        {
+          "title": "Blog Post",
+          "id": "blog-post",
+          "plugins": {
+            "da": {
+              "name": "blog-post",
+              "rows": 1,
+              "columns": 1
+            }
+          }
+        },
+        {
+          "title": "Circle Carousel",
+          "id": "circle-carousel",
+          "plugins": {
+            "da": {
+              "name": "circle-carousel",
+              "rows": 8,
+              "columns": 2,
+              "behaviour": "columns"
+            }
+          },
+          "model": "circle-carousel",
+          "filter": "circle-carousel"
+        },
+        {
+          "title": "Circle Carousel Item",
+          "id": "circle-carousel-item",
+          "plugins": {
+            "da": {
+              "name": "circle-carousel-item",
+              "behaviour": "columns-row"
+            }
+          }
+        },
+        {
+          "title": "Circle Carousel Cell",
+          "id": "circle-carousel-cell",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div></div>",
+              "behaviour": "columns-cell"
+            }
+          }
+        },
+        {
+          "title": "Hero CTA",
+          "id": "hero-cta",
+          "plugins": {
+            "da": {
+              "name": "hero-cta",
+              "rows": 8,
+              "columns": 4
+            }
+          }
+        },
+        {
+          "title": "Newsletter",
+          "id": "newsletter",
+          "plugins": {
+            "da": {
+              "name": "newsletter",
+              "rows": 8,
+              "columns": 1
+            }
+          },
+          "model": "newsletter"
+        },
+        {
+          "title": "Promotional Hero",
+          "id": "promotional-hero",
+          "plugins": {
+            "da": {
+              "name": "promotional-hero",
+              "rows": 3,
+              "columns": 3
+            }
+          }
+        },
+        {
+          "title": "Search Bar",
+          "id": "search-bar",
+          "plugins": {
+            "da": {
+              "name": "search-bar",
+              "rows": 3,
+              "columns": 1,
+              "behaviour": "columns"
+            }
+          },
+          "model": "search-bar",
+          "filter": "search-bar"
+        },
+        {
+          "title": "Store Locator",
+          "id": "store-locator",
+          "plugins": {
+            "da": {
+              "name": "store-locator",
+              "rows": 20,
+              "columns": 6,
+              "behaviour": "columns"
+            }
+          },
+          "model": "store-locator",
+          "filter": "store-locator"
+        },
+        {
+          "title": "Store Locator Item",
+          "id": "store-locator-item",
+          "plugins": {
+            "da": {
+              "name": "store-locator-item",
+              "behaviour": "columns-row"
+            }
+          }
+        },
+        {
+          "title": "Store Locator Cell",
+          "id": "store-locator-cell",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div></div>",
+              "behaviour": "columns-cell"
+            }
+          }
+        },
+        {
+          "title": "Top Banner",
+          "id": "top-banner",
+          "plugins": {
+            "da": {
+              "name": "top-banner",
+              "rows": 8,
+              "columns": 4
+            }
+          }
         }
       ]
     },
