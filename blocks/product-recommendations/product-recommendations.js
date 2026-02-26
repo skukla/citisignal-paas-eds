@@ -4,7 +4,6 @@ import { getConfigValue } from '@dropins/tools/lib/aem/configs.js';
 
 // Dropin Components
 import { Button, Icon, provider as UI } from '@dropins/tools/components.js';
-import { tryRenderAemAssetsImage } from '@dropins/tools/lib/aem/assets.js';
 
 // Cart Dropin
 import * as cartApi from '@dropins/storefront-cart/api.js';
@@ -17,6 +16,7 @@ import { publishRecsItemAddToCartClick } from '@dropins/storefront-recommendatio
 // Wishlist Dropin
 import { WishlistToggle } from '@dropins/storefront-wishlist/containers/WishlistToggle.js';
 import { render as wishlistRender } from '@dropins/storefront-wishlist/render.js';
+import { tryRenderAemAssetsImage } from '../../scripts/aem-assets.js';
 
 // Block-level
 import { readBlockConfig } from '../../scripts/aem.js';
@@ -75,7 +75,7 @@ export default async function decorate(block) {
   // Layout
   const fragment = document.createRange().createContextualFragment(`
     <div class="recommendations__wrapper">
-      <div class="recommendations__list"></div>
+      <div class="recommendations__list" data-inspector-source="catalog"></div>
     </div>
   `);
 
@@ -154,6 +154,7 @@ export default async function decorate(block) {
 
               const addToCart = document.createElement('div');
               addToCart.className = 'footer__button--add-to-cart';
+              addToCart.setAttribute('data-inspector-source', 'commerce');
               wrapper.appendChild(addToCart);
 
               if (ctx.item.itemType === 'SimpleProductView') {
