@@ -63,5 +63,3 @@ if (document.prerendering) {
 } else {
   initAnalytics();
 }
-
-// add delayed functionality here
